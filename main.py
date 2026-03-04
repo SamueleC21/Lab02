@@ -7,18 +7,23 @@ while(True):
 
     t.printMenu()
 
-    t.loadDictionary("filename.txt")
+    t.loadDictionary("dictionary.txt")
 
-    txtIn = input()
+    txtIn = input("Inserire un  numero: ")
 
     # Add input control here!
 
     if int(txtIn) == 1:
         print()
-        txtIn = input()
+        flag = True
+        at = input("Inserisci la parola aliena e traduzione: ")
+
+        parole = at.split()
+        print(t.handleAdd(parole))
         pass
     if int(txtIn) == 2:
-        pass
+        p_aliena = input("cerca una traduzione: ")
+        print(t.handleTranslate(p_aliena))
     if int(txtIn) == 3:
         pass
     if int(txtIn) == 4:
